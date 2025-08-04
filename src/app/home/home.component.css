@@ -1,24 +1,4 @@
 
-input[type="text"] {
-  border: solid 1px #cc6a2d;
-  padding: 10px;
-  border-radius: 8px;
-  margin-right: 4px;
-  display: inline-block;
-  width: 30%;
-}
-input[type="text"]:focus {
-  border-color: #cc6a2d; /* of een andere kleur die je wilt */
-  outline: none; /* verwijdert het zwarte randje */
-  box-shadow: 0 0 0 2px rgba(204, 106, 45, 0.3); /* optioneel: zachte kleur-glow */
-}
-button {
-  padding: 10px;
-  border: solid 1px #cc6a2d;
-  background-color: #cc6a2d;
-  color: white;
-  border-radius: 8px;
-}
 
 .hero {
   display: flex;
@@ -38,18 +18,18 @@ button {
 .hero p {
   font-size: 1.2rem;
   max-width: 600px;
-  margin: 0 auto;
-  margin-bottom: 50px;
+  margin: 50px auto;
 }
 
 .hero-button {
   background-color: #cc6a2d;
   color: white;
-  padding: 12px 24px;
+  padding: 24px 48px;
   text-decoration: none;
   border-radius: 8px;
   font-weight: bold;
   transition: background-color 0.3s ease;
+  font-size: 20px;
 }
 
 .hero-button:hover {
@@ -61,5 +41,7 @@ button {
   width: 100%;
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin-top: 50px;
 }
+
 
