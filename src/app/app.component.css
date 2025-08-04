@@ -10,3 +10,34 @@ header {
 .content {
   padding: var(--content-padding);
 }
+
+.navbar {
+  background-color: #fff7f0;
+  padding: 1rem 2rem;
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-start;
+  align-items: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.nav-link {
+  background-color: #cc6a2d;
+  color: white;
+  text-decoration: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  display: inline-block;
+}
+
+.nav-link:hover {
+  background-color: #b85a1f;
+  transform: translateY(-1px);
+}
+
+.nav-link:active {
+  background-color: #a14e1b;
+  transform: translateY(0);
+}

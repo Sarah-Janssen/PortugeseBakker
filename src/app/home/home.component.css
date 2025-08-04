@@ -1,11 +1,4 @@
-.results {
-  display: grid;
-  column-gap: 14px;
-  row-gap: 14px;
-  grid-template-columns: repeat(auto-fill, minmax(400px, 400px));
-  margin-top: 50px;
-  justify-content: space-around;
-}
+
 input[type="text"] {
   border: solid 1px #cc6a2d;
   padding: 10px;
@@ -26,16 +19,47 @@ button {
   color: white;
   border-radius: 8px;
 }
-@media (min-width: 500px) and (max-width: 768px) {
-  .results {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  input[type="text"] {
-    width: 70%;
-  }
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 4rem 2rem;
+  background-color: #fff7f0;
+  gap: 2rem;
 }
-@media (max-width: 499px) {
-  .results {
-    grid-template-columns: 1fr;
-  }
+
+.hero h1 {
+  font-size: 2.5rem;
+  color: #cc6a2d;
 }
+
+.hero p {
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: 0 auto;
+  margin-bottom: 50px;
+}
+
+.hero-button {
+  background-color: #cc6a2d;
+  color: white;
+  padding: 12px 24px;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.hero-button:hover {
+  background-color: #b85a1f;
+}
+
+.hero-image {
+  max-width: 500px;
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+

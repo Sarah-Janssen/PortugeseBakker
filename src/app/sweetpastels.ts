@@ -1,3 +1,4 @@
+// sweetpastels.ts
 export interface SweetpastelsInfo {
   id: number;
   name: string;

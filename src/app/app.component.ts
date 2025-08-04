@@ -1,18 +1,27 @@
+// app.component.ts
+
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
 import { HomeComponent } from './home/home.component';
+import { RouterLink, RouterOutlet } from '@angular/router';
+
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, HomeComponent],
+  imports: [RouterOutlet, HomeComponent, RouterLink],
   template: `
     <main>
-      <header class="brand-name">
+      <header class="navbar">
+      <a [routerLink]="['/']" >
+      <div class="brand-name">
         <img class="brand-logo" src="/assets/LogoPB.png" alt="logo" aria-hidden="true" />
+      </div>
+      </a>
+        <a [routerLink]="['/']" routerLinkActive="active" class="nav-link">Home</a>
+        <a [routerLink]="['lekkernijen']" class="nav-link">Lekkernijen</a>
       </header>
       <section class="content">
-        <app-home></app-home>
+        <router-outlet></router-outlet>
       </section>
     </main>
   `,

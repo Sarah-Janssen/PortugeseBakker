@@ -1,10 +1,12 @@
+// pastels.component.ts
 import { Component, input } from '@angular/core';
 import {SweetpastelsInfo} from '../sweetpastels'
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-pastels',
   standalone: true,
-  imports: [],
+  imports: [RouterLink],
   template: `
     <section class="listing">
       <img
@@ -16,6 +18,7 @@ import {SweetpastelsInfo} from '../sweetpastels'
       <h2 class="listing-heading">{{ pastelsInfo().name }}</h2>
       <p class="listing-description">{{ pastelsInfo().description }}</p>
       <h1 class="listing-price">€ {{ pastelsInfo().price }}</h1>
+      <a [routerLink]="['/pastelDetails', pastelsInfo().id]" >Learn More</a>
     </section>
   `,
   styleUrl: './pastels.component.css'
