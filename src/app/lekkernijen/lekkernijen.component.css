@@ -1,0 +1,66 @@
+/*Cards*/
+.results {
+  display: grid;
+  column-gap: 14px;
+  row-gap: 14px;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 400px));
+  margin-top: 50px;
+  justify-content: space-around;
+}
+
+@media (min-width: 500px) and (max-width: 768px) {
+  .results {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 499px) {
+  .results {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/*Search*/
+input[type="text"] {
+  border: solid 1px #cc6a2d;
+  padding: 10px;
+  border-radius: 8px;
+  margin-right: 4px;
+  display: inline-block;
+  width: 30%;
+}
+input[type="text"]:focus {
+  border-color: #cc6a2d; /* of een andere kleur die je wilt */
+  outline: none; /* verwijdert het zwarte randje */
+  box-shadow: 0 0 0 2px rgba(204, 106, 45, 0.3); /* optioneel: zachte kleur-glow */
+}
+button {
+  padding: 10px;
+  border: solid 1px #cc6a2d;
+  background-color: #cc6a2d;
+  color: white;
+  border-radius: 8px;
+}
+
+.listing-heading {
+  color: #983208;
+  font-size: 48pt;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.button {
+  background-color: #cc6a2d;
+  color: white;
+  padding: 12px 24px;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  font-size: 14px;
+}
+
+.button:hover {
+  background-color: #b85a1f;
+}
