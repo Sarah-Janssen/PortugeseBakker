@@ -5,4 +5,5 @@ export interface SweetpastelsInfo {
   photo: string;
   description: string;
   price: number;
+  category: string;
 }

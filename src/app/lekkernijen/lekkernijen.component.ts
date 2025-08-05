@@ -15,10 +15,26 @@ import { FormsModule } from '@angular/forms';
           type="text"
           [(ngModel)]="searchTerm"
           name="zoekveld"
-          placeholder="Zoek je favoriete gebak!"
+          placeholder="Zoeken"
         />
-        <a class="button" (click)="clearSearch()">Wissen</a>
+        <!-- Categorie filter -->
+        <select class="filter" [(ngModel)]="selectedCategory"  name="category">
+          <option value="">Alle categorieën</option>
+            @for (cat of categories; track cat) {
+              <option [value]="cat"> {{ cat }}</option>
+            }
+        </select>
 
+        <!-- Prijs filter -->
+        <select class="filter" [(ngModel)]="selectedPrice" name="price">
+          <option value="">Alle prijzen</option>
+          <option value="low">€0 - €2</option>
+          <option value="mid">€2 - €5</option>
+          <option value="high">€5+</option>
+        </select>
+
+        <!-- Reset-knop -->
+        <button (click)="clearSearch()">Reset filters</button>
       </form>
 
     </section>
@@ -38,6 +54,9 @@ import { FormsModule } from '@angular/forms';
 export class LekkernijenComponent {
   sweetPastelsList: SweetpastelsInfo[] = [];
   searchTerm: string = '';
+  selectedCategory = ''
+  selectedPrice = ''
+  categories = ['zoet', 'hartig', 'seizoensgebonden']
 
   private sweetPastelService = inject(SweetpastelService);
 
@@ -47,12 +66,36 @@ export class LekkernijenComponent {
 
   clearSearch() {
     this.searchTerm = ''
+    this.selectedCategory = ''
+    this.selectedPrice = ''
   }
 
+  //Search
   get filteredPastels(): SweetpastelsInfo[] {
     const term = this.searchTerm.toLowerCase();
-    return this.sweetPastelsList.filter(p =>
-      p.name.toLowerCase().includes(term) || p.description.toLowerCase().includes(term)
-    );
+
+    return this.sweetPastelsList.filter(p => {
+      const matchSearch = p.name.toLowerCase().includes(term) || p.description.toLowerCase().includes(term);
+      const matchCategory = this.selectedCategory ? p.category === this.selectedCategory : true;
+      const matchPrice = this.matchPriceFilter(p.price);
+
+      return matchSearch && matchCategory && matchPrice;
+    });
   }
+
+  matchPriceFilter(price: number): boolean {
+    switch (this.selectedPrice) {
+      case 'low':
+        return price <= 2;
+      case 'mid':
+        return price > 2 && price <= 5;
+      case 'high':
+        return price > 5;
+      default:
+        return true;
+    }
+  }
+
+
+
 }
