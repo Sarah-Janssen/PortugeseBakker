@@ -1,5 +1,5 @@
 .listing {
-  background: #f8bd9b;
+  background: #ffdab3;
   border: 1px solid #cc6a2d;
   border-radius: 30px;
   padding-bottom: 30px;
@@ -17,20 +17,37 @@
 .listing-description {
   padding: 10px 20px 20px 20px;
   color: rgb(110, 43, 25);
+  font-size: 14pt;
+  min-height: 50px;
 }
 
 .listing-price {
   padding: 10px 20px 0 20px;
   color: rgb(172, 59, 0);
-  font-size: 30px;
+  font-size: 25pt;
 }
 
 section.listing a {
   padding-left: 20px;
   text-decoration: none;
-  color: #cc5c2d;
+  color: #ffdab3;
+  font-size: 14pt;
 }
 section.listing a::after {
   content: "\203A";
   margin-left: 5px;
+}
+
+.button{
+  background-color: #ac3b00;
+  padding: 12px 24px;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  margin-left: 20px;
+}
+
+.button:hover {
+  background-color: #b85a1f;
 }

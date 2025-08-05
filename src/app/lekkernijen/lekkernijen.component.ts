@@ -33,6 +33,13 @@ import { FormsModule } from '@angular/forms';
           <option value="high">€5+</option>
         </select>
 
+<!--Sort on price-->
+        <select [(ngModel)]="sortOrder" name="sortOrder" class ="filter">
+          <option value="">Standaardvolgorde</option>
+          <option value="asc">Prijs: Laag → Hoog</option>
+          <option value="desc">Prijs: Hoog → Laag</option>
+        </select>
+
         <!-- Reset-knop -->
         <button (click)="clearSearch()">Reset filters</button>
       </form>
@@ -57,6 +64,7 @@ export class LekkernijenComponent {
   selectedCategory = ''
   selectedPrice = ''
   categories = ['zoet', 'hartig', 'seizoensgebonden']
+  sortOrder = ''
 
   private sweetPastelService = inject(SweetpastelService);
 
@@ -74,13 +82,23 @@ export class LekkernijenComponent {
   get filteredPastels(): SweetpastelsInfo[] {
     const term = this.searchTerm.toLowerCase();
 
-    return this.sweetPastelsList.filter(p => {
+    let result = this.sweetPastelsList.filter(p => {
       const matchSearch = p.name.toLowerCase().includes(term) || p.description.toLowerCase().includes(term);
       const matchCategory = this.selectedCategory ? p.category === this.selectedCategory : true;
       const matchPrice = this.matchPriceFilter(p.price);
 
       return matchSearch && matchCategory && matchPrice;
     });
+
+    if (this.sortOrder === 'asc') {
+      result = result.sort((a,b) => a.price - b.price);
+    }
+    else if (this.sortOrder === 'desc') {
+      result = result.sort((a,b) => b.price - a.price);
+    }
+    return result;
+
+
   }
 
   matchPriceFilter(price: number): boolean {
@@ -95,7 +113,6 @@ export class LekkernijenComponent {
         return true;
     }
   }
-
 
 
 }

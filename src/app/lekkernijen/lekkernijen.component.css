@@ -28,7 +28,7 @@ input[type="text"] {
   border-radius: 8px;
   margin-right: 4px;
   display: inline-block;
-  width: 30%;
+  width: 20%;
 }
 input[type="text"]:focus {
   border-color: #cc6a2d; /* of een andere kleur die je wilt */
@@ -50,7 +50,7 @@ button {
   border-radius: 8px;
   margin-right: 4px;
   display: inline-block;
-  width: 30%;
+  width: 20%;
 }
 
 .listing-heading {

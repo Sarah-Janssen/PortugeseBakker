@@ -18,7 +18,7 @@ import { RouterLink } from '@angular/router';
       <h2 class="listing-heading">{{ pastelsInfo().name }}</h2>
       <p class="listing-description">{{ pastelsInfo().description }}</p>
       <h1 class="listing-price">€ {{ pastelsInfo().price }}</h1>
-      <a [routerLink]="['/pastelDetails', pastelsInfo().id]" >Learn More</a>
+      <a class="button" [routerLink]="['/pastelDetails', pastelsInfo().id]" >Lees meer</a>
     </section>
   `,
   styleUrl: './pastels.component.css'
