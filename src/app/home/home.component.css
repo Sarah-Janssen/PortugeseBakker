@@ -45,3 +45,9 @@
 }
 
 
+.listing-description {
+  padding: 10px 20px 20px 20px;
+  color: rgb(110, 43, 25);
+  font-size: 14pt;
+  min-height: 50px;
+}

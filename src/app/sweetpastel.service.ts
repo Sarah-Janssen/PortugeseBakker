@@ -107,7 +107,7 @@ export class SweetpastelService {
     {
       id: 13,
       name: 'Dom Rodrigo',
-      photo: './assets/images/sweetPastel/DomRodrigo.png',
+      photo: './assets/images/sweetPastel/DomRodrigo.jpg',
       description: 'Zilverpapiertje met amandel en eiergaren.',
       price: 2.9,
       category: 'hartig'
@@ -115,7 +115,7 @@ export class SweetpastelService {
     {
       id: 14,
       name: 'Cavacas',
-      photo: './assets/images/sweetPastel/Cavacas.png',
+      photo: './assets/images/sweetPastel/Cavacas.jpg',
       description: 'Luchtige cakejes met suikerlaagje.',
       price: 2.3,
       category: 'zoet'
@@ -123,7 +123,7 @@ export class SweetpastelService {
     {
       id: 15,
       name: 'Areias',
-      photo: './assets/images/sweetPastel/Areias.png',
+      photo: './assets/images/sweetPastel/Areias.jpg',
       description: 'Zandkoekjes met suiker of kaneel.',
       price: 1.8,
       category: 'zoet'

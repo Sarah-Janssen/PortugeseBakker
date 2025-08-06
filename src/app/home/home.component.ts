@@ -15,7 +15,7 @@ import {RouterLink} from '@angular/router'
     <section class="hero">
       <div class="hero-content">
         <h1>Welkom bij onze Portugese Bakker!</h1>
-        <p>Ontdek onze heerlijke traditionele pastelgebakjes, rechtstreeks uit Portugal.</p>
+        <p class="listing-description">Ontdek onze heerlijke traditionele pastelgebakjes, rechtstreeks uit Portugal.</p>
         <a class="hero-button" [routerLink]="['/lekkernijen']">Bekijk onze lekkernijen</a>
       </div>
       <img class="hero-image" src="assets/images/sweetPastel/pasteldenata.jpg" alt="Portugese pasteis">
