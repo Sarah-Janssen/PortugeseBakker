@@ -1,16 +1,16 @@
 // home.component.ts
 
 import {Component, inject, OnInit} from '@angular/core'
-import { PastelsComponent} from '../pastels/pastels.component'
+
 import {RouterLink} from '@angular/router'
-import { CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
+import {OveronsComponent} from '../overons/overons.component'
 
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [PastelsComponent, RouterLink, CommonModule],
+  imports: [RouterLink, OveronsComponent],
   template: `
     <section class="hero">
       <div class="hero-content">
@@ -32,10 +32,25 @@ import { HttpClient } from '@angular/common/http';
         }
       </div>
     </section>
-
+    <section class="hero">
+      <div class="hero-content">
+        <h1>De Portugese bakker wenst je een warm welkom in Turnhout!</h1>
+        <p class="listing-description">
+          Bij ons proef je de zon van Lissabon in elke hap. Al generaties lang bakken wij met liefde en ambacht de lekkerste pasteis de nata,
+          krokant van buiten en zijdezacht van binnen. Onze bakkerij is een plek waar traditie en passie samenkomen.
+        </p>
+        <p class="listing-description">
+          Of je nu op zoek bent naar een snelle zoete pauze of een gezellige babbel met een koffie erbij, onze deuren staan elke dag voor je open.
+          Kom langs en ervaar de warmte van Portugal, gewoon hier in het hart van Turnhout.
+        </p>
+        <a class="hero-button" [routerLink]="['/over-ons']">Lees ons verhaal</a>
+      </div>
+      <img class="hero-image" src="assets/images/sweetPastel/Areias.jpg" alt="Portugese pasteis">
+    </section>
   `,
   styleUrl: './home.component.css'
 })
+
 export class HomeComponent implements OnInit {
   private http = inject(HttpClient);
 

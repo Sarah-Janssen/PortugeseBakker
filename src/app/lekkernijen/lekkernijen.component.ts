@@ -4,6 +4,7 @@ import { SweetpastelsInfo } from '../sweetpastels';
 import { PastelsComponent } from '../pastels/pastels.component';
 import { FormsModule } from '@angular/forms';
 
+
 @Component({
   selector: 'app-lekkernijen',
   standalone: true,

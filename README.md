@@ -54,7 +54,7 @@ Deze Angular-app wordt uitgebouwd tot een moderne, professionele webshop voor ee
 | User Story | Status |
 |------------|--------|
 | De gebruiker wordt verwelkomd op een mooie homepagina met een hero-banner | ✅ Afgewerkt |
-| De gebruiker ziet tijdelijke acties of seizoensproducten op de homepagina | 🔜 Gepland |
+| De gebruiker ziet tijdelijke acties of seizoensproducten op de homepagina | ✅ Afgewerkt |
 | De site heeft een warme, artisanale uitstraling dankzij kleuren, typografie en fotografie | 🔜 Gepland |
 | De gebruiker ervaart vloeiende overgangen en animaties | 🔜 Gepland |
 | De gebruiker kan een fotogalerij bekijken met beelden van de producten en winkel | 🔜 Gepland |
@@ -66,7 +66,7 @@ Deze Angular-app wordt uitgebouwd tot een moderne, professionele webshop voor ee
 
 | User Story | Status |
 |------------|--------|
-| De gebruiker kan meer lezen over de bakkerij op een "Over ons"-pagina | 🔜 Gepland |
+| De gebruiker kan meer lezen over de bakkerij op een "Over ons"-pagina | ✅ Afgewerkt  |
 | De gebruiker kan contact opnemen via een formulier (naam, e-mail, bericht) | 🔜 Gepland |
 | Contactformulieren worden doorgestuurd naar Supabase als record in een messages-tabel | 🔜 Gepland |
 | De gebruiker ziet de locatie van de winkel via een geïntegreerde kaart | 🔜 Gepland |
