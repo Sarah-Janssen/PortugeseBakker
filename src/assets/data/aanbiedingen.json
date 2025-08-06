@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "title": "2 + 1 Gratis op Pastéis",
+    "description": "Bij aankoop van 2 pastéis krijg je er eentje gratis bij.",
+    "type": "actie",
+    "validUntil": "2025-09-01"
+  },
+  {
+    "id": 2,
+    "title": "Zomeractie: -20% op koekjes",
+    "description": "Profiteer van deze zoete korting tot eind augustus.",
+    "type": "korting",
+    "validUntil": "2025-08-31"
+  }
+]

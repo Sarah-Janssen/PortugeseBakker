@@ -51,3 +51,86 @@
   font-size: 14pt;
   min-height: 50px;
 }
+
+.promoties {
+  background-color: #fff0db;
+  padding: 2rem;
+  margin-top: 2rem;
+  border-top: 3px solid #f39c12;
+}
+
+.promoties h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #c47f00;
+}
+
+.promo-lijst {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.promo-card {
+  background: #ffffff;
+  border-left: 6px solid #f39c12;
+  padding: 1rem;
+  border-radius: 5px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+.listing {
+  background: #ffdab3;
+  border: 1px solid #cc6a2d;
+  border-radius: 30px;
+  padding-bottom: 30px;
+}
+.listing-heading {
+  color: #983208;
+  padding: 10px 20px 0 20px;
+}
+.listing-photo {
+  height: 250px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 30px 30px 0 0;
+}
+.listing-description {
+  padding: 10px 20px 20px 20px;
+  color: rgb(110, 43, 25);
+  font-size: 14pt;
+  min-height: 50px;
+}
+
+.listing-price {
+  padding: 10px 20px 0 20px;
+  color: rgb(172, 59, 0);
+  font-size: 25pt;
+}
+
+section.listing a {
+  padding-left: 20px;
+  text-decoration: none;
+  color: #ffdab3;
+  font-size: 14pt;
+}
+section.listing a::after {
+  content: "\203A";
+  margin-left: 5px;
+}
+
+.button{
+  background-color: #ac3b00;
+  padding: 12px 24px;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  margin-left: 20px;
+}
+
+.button:hover {
+  background-color: #b85a1f;
+}
+

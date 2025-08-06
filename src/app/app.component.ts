@@ -23,6 +23,12 @@ import { RouterLink, RouterOutlet } from '@angular/router';
       <section class="content">
         <router-outlet></router-outlet>
       </section>
+      <footer class="footer">
+          <a [routerLink]="['/']" >
+            <img  src="/assets/LogoPB.png" alt="logo" aria-hidden="true" />
+        </a>
+        <p>All rights reserved - Sarah Janssen</p>
+      </footer>
     </main>
   `,
   styleUrl: './app.component.css'
