@@ -21,6 +21,7 @@ import { RouterLink, RouterOutlet } from '@angular/router';
         <a [routerLink]="['/']" routerLinkActive="active" class="nav-link">Home</a>
         <a [routerLink]="['lekkernijen']" class="nav-link">Lekkernijen</a>
         <a [routerLink]="['over-ons']" class="nav-link">Over Ons</a>
+        <a [routerLink]="['contact']" class="nav-link">Contact</a>
       </header>
       <section class="content">
         <router-outlet></router-outlet>
